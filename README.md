@@ -2,21 +2,27 @@
 
 This repository a clamp and foot suitable for steel tubing. The clamp is designed to fit in the middle of two tubes where one is telescoping inside the other.
 
+![Clamp on tube](photos/IMG_7522.JPG)
+
 ## Motivation
 
 I am interested in building custom furniture that suits my specific needs. One of those needs is for a standing up desk which is easily portable. This clamp mechanism allows me to create height adjustable legs for my standing up desk.
 
 ## Parts Required
 
+The clamp is designed to fit steel suitable for table legs. However, the design is parametric so you could adjust it for other purposes.
+
 - 35mm external diameter steel tube.
 - 32mm external diameter steel tube.
-- [Bike clamp mechanism]()
+- [Bike clamp mechanism](http://www.aliexpress.com/item/Outdoor-Bicycle-Aluminium-Alloy-Quick-Release-Bike-Seat-Post-Clamp-Seatpost-Skewer-Bolt-Mountain-Bike-Seat/32505480822.html)
 
 ## Instructions
 
-### Z-axis platform
+### Clamp
 
 The clamps are easy to print and require almost no assembly. If you purchased the above bicycle clamps, make sure you remove the internal flanges before fitting.
+
+### Foot
 
 The foot should be printed with 80%+ infill in order to be strong.
 
