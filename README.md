@@ -1,6 +1,6 @@
 # Telescopic Tube Clamp
 
-This repository a clamp and foot suitable for steel tubing. The clamp is designed to fit in the middle of two tubes where one is telescoping inside the other.
+This repository includes designs for a clamp and foot suitable for steel tubing. The clamp is designed to fit in the middle of two tubes where one is telescoping inside the other.
 
 ![Clamp on tube](photos/IMG_7522.JPG)
 
