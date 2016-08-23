@@ -1,11 +1,12 @@
 
 use <bolts.scad>;
 
-large_radius = 35/2;
+large_radius = 34.8/2;
 small_radius = 32/2;
 
-height = 40;
-thickness = 30;
+height = 20;
+tube_offset = height / 2;
+thickness = 34;
 sleve_thickness = 6;
 
 outset = 16;
@@ -27,9 +28,9 @@ module sleve() {
 			block();
 		}
 		
-		cylinder_outer(height/2, large_radius, 64);
-		translate([0, 0, height/2]) cylinder_outer(height/2, small_radius, 64);
-		translate([outer_radius+1, thickness/2+1, height/2]) rotate(90, [1, 0, 0]) hole(6, thickness + 2, 0);
+		cylinder_outer(tube_offset, small_radius, 64);
+		translate([0, 0, tube_offset]) cylinder_outer(height-tube_offset, large_radius, 64);
+		translate([outer_radius, thickness/2+1, height/2]) rotate(90, [1, 0, 0]) hole(6, thickness + 2, 0);
 		
 		cutout();
 	}
