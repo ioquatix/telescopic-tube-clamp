@@ -12,8 +12,7 @@ I am interested in building custom furniture that suits my specific needs. One o
 
 The clamp is designed to fit steel suitable for table legs. However, the design is parametric so you could adjust it for other purposes.
 
-- 35mm external diameter steel tube.
-- 32mm external diameter steel tube.
+- [32mm & 35mm external diameter steel tube](https://www.industrialtube.co.nz/products/carbon-steel-tubing).
 - [Bike clamp mechanism](http://www.aliexpress.com/item/Outdoor-Bicycle-Aluminium-Alloy-Quick-Release-Bike-Seat-Post-Clamp-Seatpost-Skewer-Bolt-Mountain-Bike-Seat/32505480822.html)
 
 ## Instructions
