@@ -1,6 +1,6 @@
 
 $radial_error = 0.1;
-$fn = 16;
+$fn = 32;
 
 module cylinder_outer(height, radius, fn=$fn) {
 	fudge = 1/cos(180/fn);
