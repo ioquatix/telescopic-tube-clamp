@@ -10,11 +10,11 @@ small_radius = 32/2;
 
 rf = 3;
 
-thickness = 34+2;
-sleve_thickness = 10;
+thickness = 30;
+sleve_thickness = 6;
 outer_radius = large_radius + sleve_thickness;
 
-outset = 16+2;
+outset = 16+4;
 
 module block(height = 30) {
 	translate([outer_radius, 0, 0]) zcube([outset, thickness, height]);
@@ -33,7 +33,7 @@ module sleve(height, hole_offset) {
 		
 		children();
 		
-		translate([outer_radius+1, thickness/2+1, hole_offset]) rotate(90, [1, 0, 0]) hole(8, thickness + 2, 0);
+		translate([outer_radius+2, thickness/2+1, hole_offset]) rotate(90, [1, 0, 0]) hole(8, thickness + 2, 0);
 		
 		cutout(height);
 	}

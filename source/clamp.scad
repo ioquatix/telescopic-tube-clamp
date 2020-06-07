@@ -1,4 +1,6 @@
 
 include <parts.scad>;
 
-sleve(30, 15) telescope_cutout(30);
+height = 30;
+
+sleve(height, height/2) telescope_cutout(height);
