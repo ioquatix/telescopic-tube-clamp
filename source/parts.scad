@@ -1,4 +1,7 @@
 
+$tolerance = 0.1;
+$fn = $preview ? 12 : 32;
+
 use <bolts.scad>;
 use <zcube.scad>;
 
@@ -14,11 +17,11 @@ outer_radius = large_radius + sleve_thickness;
 outset = 16+2;
 
 module block(height = 30) {
-	translate([outer_radius, 0, height/2]) cube([outset, thickness, height], true);
+	translate([outer_radius, 0, 0]) zcube([outset, thickness, height]);
 }
 
-module cutout(height = 30, thickness = 4) {
-	translate([0, -thickness/2, 0]) #cube([(outer_radius*2+outset)/2, thickness, height]);
+module cutout(height = 30, thickness = 2) {
+	translate([0, -thickness/2, 0]) cube([(outer_radius*2+outset+$tolerance)/2, thickness, height]);
 }
 
 module sleve(height, hole_offset) {
