@@ -11,13 +11,13 @@ small_radius = 32/2;
 rf = 3;
 
 thickness = 30;
-sleve_thickness = 6;
+sleve_thickness = 10;
 outer_radius = large_radius + sleve_thickness;
 
-outset = 16+4;
+outset = 12;
 
 module block(height = 30) {
-	translate([outer_radius, 0, 0]) zcube([outset, thickness, height]);
+	translate([outer_radius - 2, 0, 0]) rcube([outset, thickness, height], 2);
 }
 
 module cutout(height = 30, thickness = 2) {
@@ -26,14 +26,24 @@ module cutout(height = 30, thickness = 2) {
 
 module sleve(height, hole_offset) {
 	render() difference() {
-		render() union() {
+		union() {
 			cylinder_inner(height, outer_radius, 32*rf);
 			block(height);
 		}
 		
 		children();
 		
-		translate([outer_radius+2, thickness/2+1, hole_offset]) rotate(90, [1, 0, 0]) hole(8, thickness + 2, 0);
+		#translate([outer_radius - sleve_thickness/2, thickness/2, hole_offset])
+		rotate(90, [1, 0, 0]) {
+			translate([0, 0, -20])
+			hole(15, 20, 0);
+			
+			translate([0, 0, thickness])
+			hole(15, 20, 0);
+			
+			translate([0, 0, -1])
+			hole(8, thickness + 2, 0);
+		}
 		
 		cutout(height);
 	}
